@@ -1,0 +1,64 @@
+<template>
+  <v-app>
+     <v-flex justify-center>
+    <v-content>
+      <div id="app">
+        <NavBar/>
+        <v-card max-width="900" class="col-sm-7 border mx-auto" color="white darken-3" light>
+            <br>
+            <h1 class="text-center">Business Clearance</h1>
+            <h2 class="text-center">Office of the Punong Barangay</h2>
+            <h2 class="text-center">Required under RA 7160 Sec. 125 Par.(c)</h2>
+            <div class="flex-grow-1"></div>
+            <br>
+          <v-card-text>
+            <v-row>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Name" filled></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Occupation" filled></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Business Address" filled></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Contact Number" filled></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Date Issued" filled></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+                <v-text-field label="Punong Barangay Signature" filled></v-text-field>
+            </v-col>
+            </v-row>
+          </v-card-text>
+          <v-card-actions>
+            <div class="flex-grow-1"></div>
+            <v-btn color="white" fab large @click="isEditing = !isEditing">Preview</v-btn>
+          </v-card-actions>
+          <v-snackbar
+            v-model="hasSaved"
+            :timeout="2000"
+            absolute
+            bottom
+            left
+          >Your profile has been updated</v-snackbar>
+        </v-card>
+       
+    <Footer/>
+      </div>
+    </v-content>
+     </v-flex>
+  </v-app>
+</template>
+<script>
+import NavBar from "../../modules/NavBar.vue";
+import Footer from "../../modules/Footer.vue";
+export default {
+  components: {
+    NavBar,
+    Footer
+  }
+};
+</script>
