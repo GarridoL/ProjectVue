@@ -1,8 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Login from "./components/user/auth/Login.vue";
-import Register from "./components/user/auth/Login.vue";
-import Homepage from "./components/user/homepage/BusinessClearance.vue";
+import Home from "./components/user/auth/Home.vue";
+import BusinessClearance from "./components/user/homepage/BusinessClearance.vue";
+import BarangayClearance from "./components/user/homepage/BarangayClearance.vue";
+import BarangayIndigency from "./components/user/homepage/BarangayIndigency.vue";
+import BarangayID from "./components/user/homepage/BarangayID.vue";
 
 Vue.use(Router);
 
@@ -10,23 +12,34 @@ export default new Router({
     routes: [{
             path: "/",
             redirect: {
-                name: "login"
+                name: "home",
+                component: Home
             }
-        },
-        {
-            path: "/login",
-            name: "login",
-            component: Homepage
-        }, {
-            path: "/register",
-            name: "register",
-            component: Register
         },
         {
             path: "/home",
             name: "home",
-            component: Homepage
+            component: Home
         },
-        
+        {
+            path: "/business-clearance",
+            name: "business-clearance",
+            component: BusinessClearance
+        },
+        {
+            path: "/barangay-id",
+            name: "barangay-id",
+            component: BarangayID
+        },
+        {
+            path: "/barangay-clearance",
+            name: "barangay-clearance",
+            component: BarangayClearance
+        },
+        {
+            path: "/barangay-indigency",
+            name: "barangay-indigency",
+            component: BarangayIndigency
+        }
     ]
 });

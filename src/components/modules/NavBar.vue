@@ -18,13 +18,12 @@
           <v-list-item-title class="title text-center">Menu</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-divider></v-divider>
       <v-list nav dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.link" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-content>
+          <v-list-item-content>           
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -33,14 +32,15 @@
   </v-container>
 </template>
 <script>
+import Vue from "vue";
 export default {
   data: () => ({
     items: [
-      { title: "Home", icon: "mdi-home" },
-      { title: "Transaction History", icon: "mdi-history" },
-      { title: "Account Settings", icon: "mdi-settings" },
-      { title: "Add Staff", icon: "mdi-plus" },
-      { title: "Logout", icon: "mdi-logout" }
+      { title: "Barangay Clearance", icon: "mdi-home", link:'/barangay-clearance' },
+      { title: "Barangay Indigency", icon: "mdi-home", link:'/barangay-indigency'  },
+      { title: "Barangay ID", icon: "mdi-home", link:'/barangay-id'  },
+      { title: "Business Clearance", icon: "mdi-home", link:'/business-clearance'  },
+      { title: "Settings", icon: "mdi-settings" }
     ],
     drawer: false,
     group: null
