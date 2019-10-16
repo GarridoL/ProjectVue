@@ -1,4 +1,4 @@
-<template>
+<template >
   <v-container>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
@@ -10,7 +10,7 @@
         <span class="mr-2">Beta Version</span>
       </v-btn>
     </v-app-bar>
-    <br/>
+    <br>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title text-center">FORM CATEGORIES</v-list-item-title>
@@ -27,11 +27,18 @@
               height="300"
               @click="toggle"
             >
+              <v-scroll-y-transition>
+                <div
+                  v-if="active ? 'Barangay Indigency' : '#ffffff'"
+                  class="display-1 flex-grow-1 text-center font-weight-light"
+                >{{ item.title }}</div>
+              </v-scroll-y-transition>
             </v-card>
           </v-item>
         </v-col>
       </v-row>
     </v-list-item>
+    <Footer/>
   </v-container>
 </template>
 <script>
@@ -41,6 +48,10 @@ export default {
     Footer
   },
   data: () => ({
+    color : {
+      header: '#0D47A1',
+      text: 'white'
+    },
     items: [
       {
         title: "Barangay Clearance",

@@ -40,6 +40,5 @@ export default new Router({
             path: "/barangay-indigency",
             name: "barangay-indigency",
             component: BarangayIndigency
-        }
-    ]
+        }]
 });
