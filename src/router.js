@@ -9,7 +9,8 @@ import BarangayID from "./components/user/homepage/BarangayID.vue";
 Vue.use(Router);
 
 export default new Router({
-    routes: [{
+    routes: [
+        {
             path: "/",
             redirect: {
                 name: "home",
@@ -40,5 +41,6 @@ export default new Router({
             path: "/barangay-indigency",
             name: "barangay-indigency",
             component: BarangayIndigency
-        }]
+        }
+    ]
 });
