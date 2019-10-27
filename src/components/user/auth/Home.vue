@@ -24,7 +24,7 @@
             <v-img
             height="300"
             width="930"
-            src= "https://csusmchronicle.com/wp-content/uploads/2017/10/O6_An-acquaintance-today-and-a-friend-tomorrow_Courtesy-of-Wikimedia-Commons.jpg"
+            src= "http://c1.peakpx.com/wallpaper/1014/456/972/light-dark-pen-blur-wallpaper-preview.jpg"
             
           >REQUIREMENTS: <pre>{{ item.requirement }}</pre></v-img> 
               </v-card>
