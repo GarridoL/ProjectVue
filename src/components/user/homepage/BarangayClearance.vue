@@ -34,13 +34,13 @@
                 <v-col cols="12" sm="6" md="6">
                   <v-text-field v-model="dateIssued" label="Date Issued" filled></v-text-field>
                 </v-col>
-                <v-col cols="12" sm="6" md="6">
+                <!--<v-col cols="12" sm="6" md="6">
                   <v-text-field
                     v-model="personInCharged"
                     label="Person in Charged Signature"
                     filled
                   ></v-text-field>
-                </v-col>
+                </v-col>-->
               </v-row>
             </v-card-text>
             <v-card-actions>
@@ -76,13 +76,19 @@ export default {
   },
   methods: {
     generate() {
+    //use import statements 
+    //import pdfMake from 'pdfMake'
       var pdfMake = require('pdfmake/build/pdfmake.js');
       var pdfFonts = require('pdfmake/build/vfs_fonts.js');
       pdfMake.vfs = pdfFonts.pdfMake.vfs;
       var docDefinition = {
         content: "This is a test."
       };
+      //open ra ayaw ra e download  :) 
       pdfMake.createPdf(docDefinition).download("optionalName.pdf");
+      
+    //naa sa admin version ang sample , thanks
+      
     }
   }
 }
