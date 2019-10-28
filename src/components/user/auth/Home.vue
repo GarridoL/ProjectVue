@@ -25,7 +25,7 @@
             height="300"
             width="930"
             src= "https://i.pinimg.com/originals/d1/43/9a/d1439a2280071aebb2205a9785dac718.jpg"
-            gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
+            gradient="to top, rgba(100,115,201,.33), rgba(25,32,72,.7)"
             
           >REQUIREMENTS: <pre>{{ item.requirement }}</pre></v-img>
               </v-card>
