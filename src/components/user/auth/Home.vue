@@ -20,13 +20,14 @@
       <v-list-item v-for="item in items" :key="item.title" :to="item.link">
         <v-row>
           <v-col>
-            <div class="float-right"><v-card class="white--text text-center headline font-weight-regular">
+            <div class="float-right"><v-card class="white--text text-center headline font-weight-light">
             <v-img
             height="300"
             width="930"
-            src= "http://c1.peakpx.com/wallpaper/1014/456/972/light-dark-pen-blur-wallpaper-preview.jpg"
+            src= "https://i.pinimg.com/originals/d1/43/9a/d1439a2280071aebb2205a9785dac718.jpg"
+            gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
             
-          >REQUIREMENTS: <pre>{{ item.requirement }}</pre></v-img> 
+          >REQUIREMENTS: <pre>{{ item.requirement }}</pre></v-img>
               </v-card>
             </div>
             <v-item v-slot:default="{ active, toggle }">
