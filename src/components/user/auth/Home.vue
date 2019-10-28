@@ -73,7 +73,7 @@ export default {
       },
       {
         title: "Barangay Indigency",
-        requirement:"1. Application Form\n2. Application Fee (Usually varies around less than P100)\n3. Recent Community Tax Certificate or Cedula\n4. Reason why you need such form",
+        requirement:"1. Application Form\n2. Application Fee (Usually varies around less than P100)\n3. Recent Community Tax Certificate or Cedula",
         icon: "mdi-home",
         link: "/barangay-indigency"
       },
