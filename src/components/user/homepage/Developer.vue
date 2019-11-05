@@ -4,13 +4,13 @@
           <v-card class="d-inline-block mx-auto">
           <v-container>
             <v-row>
-              <!-- <v-col cols="auto">
+              <v-col cols="auto">
                 <img
                   height="300"
                   width="300"
                   :src="image"
                 />
-              </v-col> -->
+              </v-col>
               <v-col cols="100" class="text-center pl-0">
                 <v-row class="flex-column ma-0 fill-height" justify="center">
                   <v-btn text>{{name}}</v-btn>
@@ -25,10 +25,8 @@
 <script>
 export default {
     props: {
-        developer: {
-            name: String
-            // image: String
-        }
+        name: String,
+        image: String
     }
 }
 </script>

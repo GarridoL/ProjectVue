@@ -1,7 +1,7 @@
 <template>
   <v-app>
       <template v-for="(dev, index) in developer">
-        <Developer :key="index" v-bind:name="dev.name"/>
+        <Developer :key="index" v-bind:name="dev.name" v-bind:image="dev.image"/>
       </template>
   </v-app>
 </template>
